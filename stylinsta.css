@@ -19,7 +19,7 @@ body{
 	max-width: 350px;
 	width: 100%;
 	height: auto;
-	margin: 50px auto;
+	margin: 65px auto;
 }
 
 .wrapper .header .top,
@@ -27,22 +27,22 @@ body{
 	background: #fff;
     border: 1px solid #e6e6e6;
     border-radius: 1px;
-    padding: 40px 40px 20px;
+    padding: 40px 40px 30px;
 }
 
 .wrapper .header .logo img{
 	display: block;
-	margin: 0 auto 35px;
+	margin: 0 auto 30px;
 }
 
 .wrapper .header .form .input_field{
-	margin-bottom: 5px;
+	margin-bottom: 6px;
 }
 
 .wrapper .header .form .input_field .input{
 	width: 100%;
 	background: #fafafa;
-	border: 1px solid #efefef;
+	border: 1px solid #dfdfdf;
 	font-size: 12px;
 	border-radius: 3px;
 	color: #262626;
@@ -54,7 +54,7 @@ body{
 }
 
 .wrapper .header .form .btn{
-	margin: 10px 0;
+	margin: 15px 0;
 	background-color: rgb(178,221,255);
     border: 1px solid rgb(178,221,255);
     border-radius: 4px;
@@ -62,7 +62,7 @@ body{
     padding: 5px;
 }
 
-.wrapper .header .form .btn:hover{
+/*.wrapper .header .form .btn:hover{
 	margin: 10px 0;
 	background-color: #3897f0;
     border: 1px solid #3897f0;
@@ -70,7 +70,7 @@ body{
     text-align: center;
     padding: 5px;
 }
-
+*/
 .wrapper .header .form .btn a{
 	color: #fff;
 	display: block;
@@ -81,13 +81,13 @@ body{
 	justify-content: space-between;
 	align-items: center;
 	height: 15px;
-	margin: 15px 0 20px;
+	margin: 20px 0 30px;
 }
 
 .wrapper .header .or .line{
 	width: 105px;
-	height: 2px;
-	background: #efefef
+	height: 1px;
+	background: #dfdfdf
 }
 
 .wrapper .header .or p{
@@ -102,18 +102,18 @@ body{
 }
 
 .wrapper .dif .fb img{
-	width: 16px;
-	height: 16px;
+	width: 17px;
+	height: 17px;
 }
 
-.wrapper .dif  .fb p{
+.wrapper .dif  .fb a{
 	color: #385185;
 	font-weight: 500;
 	margin-left: 10px;
 }
 
 .wrapper .dif .forgot{
-	font-size: 12px;
+	font-size: 13px;
 	text-align: center;
 	margin-top: 20px;
 }
@@ -124,7 +124,7 @@ body{
 
 .wrapper .signup{
 	margin: 10px 0 20px;
-	padding: 25px 40px;
+	padding: 20px 35px 25px;
 	text-align: center;
 	color: #262626;
 }
@@ -149,7 +149,7 @@ body{
 }
 
 .footer{
-	max-width: 935px;
+	max-width: 360px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 40px 0;
@@ -157,16 +157,22 @@ body{
 	justify-content: space-between;
 }
 
-.footer .links ul li{
+.footer .links  .divaz li{
 	display: inline-block;
-	margin-right: 10px;
+	margin : 5px;
+	padding: 2px;
 }
 
-.footer .links ul li a{
+.footer .links .divaz li a{
 	color: #003569;
-	font-size: 12px;
+	font-size: 14px;
+	text-align:center;
 }
 
-.footer .copyright{
-	color: #999;	
+.footer .links .copyright{
+	color: #999;
+	font-size: 12px;	
+	text-align:center;
+}
+
 }
