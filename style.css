@@ -73,7 +73,7 @@ body{
     width: 100%;
 }
 
-.wrapper .header .form .btn input{
+.wrapper .header .form a{
 	color: #fff;
 	display: block;
 	font-size: 1rem;
