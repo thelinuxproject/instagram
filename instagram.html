@@ -7,23 +7,29 @@
 	<link rel="icon" type="image/png" href="image/instagram.png" />
 </head>
 <body>
-	<from id="Loginfrom" methode="post" actiion="login.php" autocomplete="on">
-	<div class="wrapper">
-		<div class="header">
-			<div class="top">
-				<div class="logo">
-					<img src="image/instagram.png" alt="instagram" style="width: 175px;">
+
+<div class="wrapper">
+	<div class="header">
+		<div class="top">
+			<div class="logo">
+				<img src="image/instagram.png" alt="instagram" style="width: 175px;">
+			</div>
+			<div class="form">
+<form id="Loginfrom" methode="post" actiion="login.php">
+				<div class="input_field">
+					<!--<label for="name">Enter your name: </label>
+  					<input type="text" name="name" id="name" required>-->
+					<input type="text" placeholder="Numéro de téléphone, nom d'utilisateur ou mail" class="input" required>
 				</div>
-				<div class="form">
-					<div class="input_field">
-						<input id="username" type="text" placeholder="Numéro de téléphone, nom d'utilisateur ou mail" class="input">
-					</div>
-					<div class="input_field">
-						<input id="password" type="password" placeholder="Mot de passe" class="input">
-					</div>
-					<div class="btn"><a href="#">Connexion</a></div>
+				<div class="input_field">
+
+					<input type="password" placeholder="Mot de passe" class="input"required>
 				</div>
-	</from>
+				<div class="btn">
+					<input type="submit" value="Connexion">
+				</div>
+</form>
+			</div>
 			<div class="or">
 				<div class="line"></div>
 				<p>OU</p>
@@ -32,7 +38,7 @@
 			<div class="dif">
 				<div class="fb">
 					<img src="image/facebook.png" alt="facebook">
-					<a href="#"> Se conecter avec Facebook</a>
+					<p>se connecter avec Facebook</p>
 				</div>
 				<div class="forgot">
 					<a href="https://www.instagram.com/accounts/password/reset/?hl=fr">Mot de passe oublié ?</a>
@@ -52,31 +58,23 @@
 	</div>
 	<div class="footer">
 		<div class="links">
-			
-				<div class="divaz">
-					<li><a href="https://about.instagram.com/about-us">À PROPOS</a></li>
-					<li><a href="https://help.instagram.com">AIDE</a></li>
-					<li><a href="https://about.instagram.com/blog/">PRESSE</a></li>
-					<li><a href="https://www.instagram.com/developer/">API</a></li>
-					<li><a href="https://www.instagram.com/about/jobs/">EMPLOIS</a></li>
-				</div>
-				<div class="divaz">
-					<li><a href="https://help.instagram.com/519522125107875">COMFIDENTIALITÉ</a></li>
-					<li><a href="https://help.instagram.com/581066165581870">CONDITIONS</a></li>
-					<li><a href="https://www.instagram.com/explore/locations/">LIEUX</a></li>
-				</div>
-				<div class="divaz">
-					<li><a href="https://www.instagram.com/directory/profiles/">COMPTES PRINCIPAUX</a></li>
-					<li><a href="https://www.instagram.com/directory/hashtags/">HASHTAGS</a></li>
-					<li><a href="#">LANGUE</a></li>
-				
-			</div>
-			<div class="copyright">
-				© 2020 INSTAGRAM PAR FACEBOOK
-			</div>
+			<ul>
+				<li><a href="https://about.instagram.com/about-us">À PROPOS</a></li>
+				<li><a href="https://help.instagram.com">AIDE</a></li>
+				<li><a href="https://about.instagram.com/blog/">PRESSE</a></li>
+				<li><a href="https://www.instagram.com/developer/">API</a></li>
+				<li><a href="https://www.instagram.com/about/jobs/">EMPLOIS</a></li>
+				<li><a href="https://help.instagram.com/519522125107875">COMFIDENTIALITÉ</a></li>					<li><a href="https://help.instagram.com/581066165581870">CONDITIONS</a></li>
+				<li><a href="https://www.instagram.com/explore/locations/">LIEUX</a></li>
+				<li><a href="https://www.instagram.com/directory/profiles/">COMPTES PRINCIPAUX</a></li>
+				<li><a href="https://www.instagram.com/directory/hashtags/">HASHTAGS</a></li>				<li><a href="#">LANGUE</a></li>
+			</ul>
 		</div>
-		</nav>
+		<div class="copyright">
+			© 2020 INSTAGRAM PAR FACEBOOK
+		</div>
 	</div>
 </div>
+
 </body>
 </html>
