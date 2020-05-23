@@ -53,7 +53,7 @@ body{
 	border: 1px solid #b2b2b2;
 }
 
-.wrapper .header .form .btn input{
+.wrapper .header .form .btn {
 	margin: 10px 0;
 	background-color: rgb(178,221,255);
     border: 1px solid rgb(178,221,255);
@@ -63,7 +63,7 @@ body{
     width: 100%;
 }
 
-.wrapper .header .form .btn input:hover{
+.wrapper .header .form .btn:hover{
 	margin: 10px 0;
 	background-color: #3897f0;
     border: 1px solid #3897f0;
@@ -73,7 +73,7 @@ body{
     width: 100%;
 }
 
-.wrapper .header .form a{
+.wrapper .header .form .btnt{
 	color: #fff;
 	display: block;
 	font-size: 1rem;
