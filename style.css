@@ -25,9 +25,9 @@ body{
 .wrapper .header .top,
 .wrapper .signup{
 	background: #fff;
-    border: 1px solid #e6e6e6;
-    border-radius: 1px;
-    padding: 40px 40px 20px;
+	border: 1px solid #e6e6e6;
+	border-radius: 1px;
+	padding: 40px 40px 20px;
 }
 
 .wrapper .header .logo img{
@@ -56,21 +56,21 @@ body{
 .wrapper .header .form .btn {
 	margin: 10px 0;
 	background-color: rgb(178,221,255);
-    border: 1px solid rgb(178,221,255);
-    border-radius: 4px;
-    text-align: center;
-    padding: 5px;
-    width: 100%;
+    	border: 1px solid rgb(178,221,255);
+    	border-radius: 4px;
+   	text-align: center;
+   	padding: 5px;
+	width: 100%;
 }
 
 .wrapper .header .form .btn:hover{
 	margin: 10px 0;
 	background-color: #3897f0;
-    border: 1px solid #3897f0;
-    border-radius: 4px;
-    text-align: center;
-    padding: 5px;
-    width: 100%;
+   	border: 1px solid #3897f0;
+    	border-radius: 4px;
+    	text-align: center;
+	padding: 5px;
+    	width: 100%;
 }
 
 .wrapper .header .form .btnt{
@@ -90,7 +90,7 @@ body{
 .wrapper .header .or .line{
 	width: 105px;
 	height: 2px;
-	background: #efefef
+	background: #efefef;
 }
 
 .wrapper .header .or p{
