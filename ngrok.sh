@@ -1,9 +1,15 @@
-#!/bin/sh
+#!/bin/bash
+# 
+# coded by: github.com/thelinuxproject/ngrok
 
-sudo apt update && sudo apt full-upgrade -y
-sudo apt install wget zip -y
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip -O ~/ngrok.zip
-sudo unzip ~/ngrok.zip -d /usr/bin 
-rm -rf ~/ngrok.zip
+trap 'printf "\n";stop' 2
 
-ngrok
+wget --no-check-certificate https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-386.zip > /dev/null 2>&1 
+if [[ -e ngrok-stable-linux-386.zip ]]; then
+unzip ngrok-stable-linux-386.zip > /dev/null 2>&1
+chmod +x ngrok
+rm -rf ngrok-stable-linux-386.zip
+else
+printf "\e[1;93m[!] Download error... \e[0m\n"
+exit 1
+fi
